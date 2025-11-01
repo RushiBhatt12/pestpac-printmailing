@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PestPac Print Mailing Setup Guide By Rushi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h2>PestPac Setup Guide</h2>
+            </div>
+            <div class="navbar-nav">
+                <a href="#welcome" class="nav-link active">Home</a>
+                <a href="#setup-guide" class="nav-link">Setup Guide</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#tools" class="nav-link">Tools</a>
+                <a href="#troubleshooting" class="nav-link">Help</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="progress-container hidden" id="progressContainer">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text">
+                <span id="progressText">Step 1 of 8</span>
+                <span id="progressPercent">12.5%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Welcome Section -->
+        <section id="welcome" class="section active">
+            <div class="container">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <h1>Master PestPac Print Mailing in 8 Simple Steps</h1>
+                        <p class="hero-description">
+                            Transform your customer communication with our comprehensive, visual guide to setting up PestPac's powerful print mailing system. From beginner to expert in just a few hours.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-card">
+                                <div class="stat-number">15</div>
+                                <div class="stat-label">Hours Saved Weekly</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">3.5%</div>
+                                <div class="stat-label">Response Rate</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">8.3%</div>
+                                <div class="stat-label">Revenue Increase</div>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <button class="btn btn--primary btn--lg" onclick="navigateToSection('setup-guide')">
+                                Start Setup Guide
+                            </button>
+                            <button class="btn btn--outline btn--lg" onclick="navigateToSection('dashboard')">
+                                View Analytics
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-chart-container">
+                            <canvas id="heroSatisfactionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Visual Analytics</h3>
+                        <p>Track your progress with interactive charts and real-time metrics</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Step-by-Step Guide By Rushi</h3>
+                        <p>Follow our proven 8-step process with detailed instructions</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>Interactive Tools</h3>
+                        <p>Use calculators and templates to optimize your setup</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Quick Results</h3>
+                        <p>See improvements in customer engagement within weeks</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Setup Guide Section -->
+        <section id="setup-guide" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Step-by-Step Setup Guide</h2>
+                    <p>Follow these 8 carefully designed steps to master PestPac's print mailing system</p>
+                </div>
+
+                <div class="setup-wizard">
+                    <div class="wizard-sidebar">
+                        <div class="wizard-progress">
+                            <div class="step-item active" data-step="1">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <div class="step-title">System Check</div>
+                                    <div class="step-time">5 min</div>
+                                </div>
+                            </div>
+                            <div class="step-item" data-step="2">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <div class="step-title">Access Setup</div>
+                                    <div class="step-time">10 min</div>
+                                </div>
+                            </div>
+                            <div class="step-item" data-step="3">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <div class="step-title">Communication Center</div>
+                                    <div class="step-time">30 min</div>
+                                </div>
+                            </div>
+                            <div class="step-item" data-step="4">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <div class="step-title">Letter Templates</div>
+                                    <div class="step-time">45 min</div>
+                                </div>
+                            </div>
+                            <div class="step-item" data-step="5">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <div class="step-title">Mail Merge</div>
+                                    <div class="step-time">20 min</div>
+                                </div>
+                            </div>
+                            <div class="step-item" data-step="6">
+                                <div class="step-number">6</div>
+                                <div class="step-content">
+                                    <div class="step-title">Mailing Lists</div>
+                                    <div class="step-time">25 min</div>
+                                </div>
+                            </div>
+                            <div class="step-item" data-step="7">
+                                <div class="step-number">7</div>
+                                <div class="step-content">
+                                    <div class="step-title">Test Process</div>
+                                    <div class="step-time">15 min</div>
+                                </div>
+                            </div>
+                            <div class="step-item" data-step="8">
+                                <div class="step-number">8</div>
+                                <div class="step-content">
+                                    <div class="step-title">Go Live</div>
+                                    <div class="step-time">10 min</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wizard-content">
+                        <div class="step-content-area" id="stepContent">
+                            <!-- Step content will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="wizard-navigation">
+                            <button class="btn btn--secondary" id="prevBtn" onclick="previousStep()" disabled>
+                                Previous
+                            </button>
+                            <button class="btn btn--primary" id="nextBtn" onclick="nextStep()">
+                                Next Step
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Visual Analytics Dashboard</h2>
+                    <p>Comprehensive insights into PestPac performance and user satisfaction</p>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>User Satisfaction</h3>
+                            <div class="card-actions">
+                                <button class="btn btn--sm btn--outline" onclick="refreshChart('satisfaction')">Refresh</button>
+                            </div>
+                        </div>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="satisfactionChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Feature Comparison</h3>
+                            <div class="card-actions">
+                                <select class="form-control" id="comparisonMetric" onchange="updateComparisonChart()">
+                                    <option value="ease_of_use">Ease of Use</option>
+                                    <option value="features">Features</option>
+                                    <option value="price">Price</option>
+                                    <option value="support">Support</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="comparisonChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Template Usage</h3>
+                        </div>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="templateChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>ROI Metrics</h3>
+                        </div>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <div class="metric-value">15 hrs</div>
+                                <div class="metric-label">Time Saved Weekly</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">$0.75</div>
+                                <div class="metric-label">Cost per Letter</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">12%</div>
+                                <div class="metric-label">Retention Boost</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">8.3%</div>
+                                <div class="metric-label">Revenue Increase</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card full-width">
+                        <div class="card-header">
+                            <h3>Implementation Timeline</h3>
+                        </div>
+                        <div class="timeline-container">
+                            <div class="timeline-week">
+                                <div class="week-header">Week 1</div>
+                                <div class="week-tasks">
+                                    <div class="task-item">System setup</div>
+                                    <div class="task-item">Admin configuration</div>
+                                    <div class="task-item">Initial training</div>
+                                </div>
+                            </div>
+                            <div class="timeline-week">
+                                <div class="week-header">Week 2</div>
+                                <div class="week-tasks">
+                                    <div class="task-item">Template creation</div>
+                                    <div class="task-item">Mail merge setup</div>
+                                    <div class="task-item">Testing</div>
+                                </div>
+                            </div>
+                            <div class="timeline-week">
+                                <div class="week-header">Week 3</div>
+                                <div class="week-tasks">
+                                    <div class="task-item">List building</div>
+                                    <div class="task-item">Campaign setup</div>
+                                    <div class="task-item">Staff training</div>
+                                </div>
+                            </div>
+                            <div class="timeline-week">
+                                <div class="week-header">Week 4</div>
+                                <div class="week-tasks">
+                                    <div class="task-item">Go-live</div>
+                                    <div class="task-item">Monitoring</div>
+                                    <div class="task-item">Optimization</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Interactive Tools & Calculators</h2>
+                    <p>Use these tools to optimize your PestPac setup and calculate potential returns</p>
+                </div>
+
+                <div class="tools-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" onclick="switchTab('roi-calculator')">ROI Calculator</button>
+                        <button class="tab-btn" onclick="switchTab('cost-comparison')">Cost Comparison</button>
+                        <button class="tab-btn" onclick="switchTab('template-builder')">Template Builder</button>
+                        <button class="tab-btn" onclick="switchTab('progress-tracker')">Progress Tracker</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <div id="roi-calculator" class="tab-panel active">
+                            <div class="calculator-card">
+                                <h3>ROI Calculator</h3>
+                                <div class="calculator-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">Current monthly letters sent</label>
+                                            <input type="number" class="form-control" id="monthlyLetters" value="500" onchange="calculateROI()">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Current cost per letter</label>
+                                            <input type="number" class="form-control" id="currentCost" value="1.25" step="0.01" onchange="calculateROI()">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">Time spent per campaign (hours)</label>
+                                            <input type="number" class="form-control" id="timeSpent" value="8" onchange="calculateROI()">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Hourly rate ($)</label>
+                                            <input type="number" class="form-control" id="hourlyRate" value="25" onchange="calculateROI()">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calculator-results">
+                                    <div class="result-item">
+                                        <div class="result-label">Monthly Savings</div>
+                                        <div class="result-value" id="monthlySavings">$250</div>
+                                    </div>
+                                    <div class="result-item">
+                                        <div class="result-label">Annual Savings</div>
+                                        <div class="result-value" id="annualSavings">$3,000</div>
+                                    </div>
+                                    <div class="result-item">
+                                        <div class="result-label">Time Saved Monthly</div>
+                                        <div class="result-value" id="timeSaved">60 hours</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="cost-comparison" class="tab-panel">
+                            <div class="comparison-table">
+                                <h3>Cost Comparison Tool</h3>
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Method</th>
+                                            <th>Setup Cost</th>
+                                            <th>Monthly Cost</th>
+                                            <th>Time Required</th>
+                                            <th>Effectiveness</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Manual Printing</td>
+                                            <td>$0</td>
+                                            <td>$625</td>
+                                            <td>8 hours</td>
+                                            <td>2.5/5</td>
+                                        </tr>
+                                        <tr class="highlight-row">
+                                            <td>PestPac Automated</td>
+                                            <td>$200</td>
+                                            <td>$375</td>
+                                            <td>1 hour</td>
+                                            <td>3.5/5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Third-party Service</td>
+                                            <td>$500</td>
+                                            <td>$450</td>
+                                            <td>2 hours</td>
+                                            <td>3.0/5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="template-builder" class="tab-panel">
+                            <div class="template-builder">
+                                <h3>Letter Template Builder</h3>
+                                <div class="template-options">
+                                    <div class="template-type-selector">
+                                        <label class="form-label">Template Type</label>
+                                        <select class="form-control" id="templateType" onchange="updateTemplatePreview()">
+                                            <option value="service-reminder">Service Reminder</option>
+                                            <option value="collection-notice">Collection Notice</option>
+                                            <option value="welcome-letter">Welcome Letter</option>
+                                            <option value="thank-you">Thank You Note</option>
+                                        </select>
+                                    </div>
+                                    <div class="template-customization">
+                                        <label class="form-label">Company Name</label>
+                                        <input type="text" class="form-control" id="companyName" value="Your Pest Control Co." onchange="updateTemplatePreview()">
+                                        
+                                        <label class="form-label">Primary Color</label>
+                                        <input type="color" class="form-control" id="primaryColor" value="#218085" onchange="updateTemplatePreview()">
+                                    </div>
+                                </div>
+                                <div class="template-preview">
+                                    <h4>Preview</h4>
+                                    <div class="letter-preview" id="letterPreview">
+                                        <!-- Template preview will be populated by JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="progress-tracker" class="tab-panel">
+                            <div class="progress-tracker">
+                                <h3>Setup Progress Tracker</h3>
+                                <div class="checklist">
+                                    <div class="checklist-item">
+                                        <input type="checkbox" id="check1" onchange="updateProgress()">
+                                        <label for="check1">System requirements verified</label>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <input type="checkbox" id="check2" onchange="updateProgress()">
+                                        <label for="check2">PestPac settings accessed</label>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <input type="checkbox" id="check3" onchange="updateProgress()">
+                                        <label for="check3">Communication center configured</label>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <input type="checkbox" id="check4" onchange="updateProgress()">
+                                        <label for="check4">First template created</label>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <input type="checkbox" id="check5" onchange="updateProgress()">
+                                        <label for="check5">Mail merge configured</label>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <input type="checkbox" id="check6" onchange="updateProgress()">
+                                        <label for="check6">Mailing lists created</label>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <input type="checkbox" id="check7" onchange="updateProgress()">
+                                        <label for="check7">Test mailing completed</label>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <input type="checkbox" id="check8" onchange="updateProgress()">
+                                        <label for="check8">System is live</label>
+                                    </div>
+                                </div>
+                                <div class="overall-progress">
+                                    <div class="progress-label">Overall Progress</div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="overallProgress"></div>
+                                    </div>
+                                    <div class="progress-percentage" id="progressPercentage">0%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section id="troubleshooting" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Troubleshooting & Support</h2>
+                    <p>Common issues and solutions to keep your print mailing system running smoothly</p>
+                </div>
+
+                <div class="troubleshooting-content">
+                    <div class="search-box">
+                        <input type="text" class="form-control" placeholder="Search for issues..." id="issueSearch" oninput="filterIssues()">
+                    </div>
+
+                    <div class="issues-accordion" id="issuesAccordion">
+                        <!-- Issues will be populated by JavaScript -->
+                    </div>
+
+                    <div class="support-resources">
+                        <div class="resource-card">
+                            <h3>📞 Phone Support</h3>
+                            <p>Get immediate help from our technical support </p>
+                            <div class="resource-details">
+                                <div>Hours: Mon-Fri 8AM-6PM IST</div>
+                                <div>Phone: 6358006660</div>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h3>💬 Live Chat</h3>
+                            <p>Chat with me for quick assistance</p>
+                            <button class="btn btn--primary" onclick="openChat()">Start Chat</button>
+                        </div>
+                        <div class="resource-card">
+                            <h3>📚 Documentation</h3>
+                            <p>Comprehensive guides and tutorials</p>
+                            <a href="#" target="_blank" class="btn btn--outline">View Docs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for detailed explanations -->
+    <div class="modal hidden" id="detailModal">
+        <div class="modal-backdrop" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Step Details</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
